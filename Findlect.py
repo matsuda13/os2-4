@@ -71,14 +71,14 @@ if __name__ == "__main__":
     ext = sys.argv[2+shift]
     print(dir, ext)
     print(option_dict)
-    n_file, wc, lc, cc, mc = search_dir(dir, ext, option_dict["w"],
-                                        option_dict["l"], option_dict["c"], option_dict["m"])
+    n_file, wc, lc, cc, mc = search_dir(dir, ext, option_dict["w"],option_dict["l"],
+                                        option_dict["c"], option_dict["m"])
     if option_dict["l"]:
-        print(lc, end=" ")
+        print(lc)
     if option_dict["w"]:
-        print(wc, end=" ")
+        print(wc)
     if option_dict["c"]:
-        print(cc, end=" ")
+        print(cc)
     if option_dict["m"]:
         print(mc, "total")
     else:
