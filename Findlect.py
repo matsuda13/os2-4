@@ -21,11 +21,19 @@ def search_dir(dir, ext, isw, isl, isc, ism, n_file=0, wc=0, lc=0, cc=0, mc=0):
                 if ism:
                     byte = os.path.getsize(dir)
                     mc += byte
-                line, word, char = wordcount(dir, isw, isl, isc)
+                line, word, chara = wordcount(dir, isw, isl, isc)
                 lc += line
                 wc += word
-                cc += char
-                print(line, word, char, byte, dir)
+                cc += chara
+                if isl:
+                    print(line, end=" ")
+                if isw:
+                    print(word, end=" ")
+                if isc:
+                    print(chara, end=" ")
+                if ism:
+                    print(byte, end=" ")
+                print(dir)
     return n_file, wc, lc, cc, mc
     
 def wordcount(file, isw, isl, isc):
