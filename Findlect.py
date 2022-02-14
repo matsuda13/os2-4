@@ -42,6 +42,8 @@ def wordcount(file, isw, isl, isc):
     And count brank to count words.
     Count charactors to count bytesize.
     Incompatible with multibyte charactors.
+
+    python3 Findlect.py {-option} Directry ext 
     """
     wc = 0
     lc = 0
@@ -82,11 +84,11 @@ if __name__ == "__main__":
     n_file, wc, lc, cc, mc = search_dir(dir, ext, option_dict["w"],option_dict["l"],
                                         option_dict["c"], option_dict["m"])
     if option_dict["l"]:
-        print(lc)
+        print(lc, end=" ")
     if option_dict["w"]:
-        print(wc)
+        print(wc, end=" ")
     if option_dict["c"]:
-        print(cc)
+        print(cc, end=" ")
     if option_dict["m"]:
         print(mc, "total")
     else:
